@@ -1,0 +1,15 @@
+[user]
+    email = zach.wolbers@gmail.com
+    name = Zach Wolbers
+[color "grep"]
+    filename = magenta
+    linenumber = green
+    function = yellow
+[core]
+    pager = cat
+[diff]
+    tool = meld
+[alias]
+    lg = log --graph --all --date=format-local:'%F %R' --pretty=tformat:'%C(auto)%h %C(magenta)%ad%C(auto)%d %s' -n 25
+[url "https://aur.archlinux.org/"]
+    insteadOf = "aur:"
