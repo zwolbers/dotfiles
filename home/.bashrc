@@ -22,7 +22,7 @@ function prompt_command() {
     [[ ${exit} -ne 0 ]] && PS1+="\[\e[1;31m\]${exit}\[\e[m\]\n"
 
     PS1+="\[\e[1;35m\]\!\[\e[m\] "              # history numbers
-    [[ -n ${SSH_CLIENT} ]] && PS1+="\[\e[4m\]"  # underline if ssh'd
+    [[ -n ${SSH_CLIENT} ]] && PS1+="\[\e[2m\]"  # 'dim' if ssh'd
     PS1+="\[\e[1;32m\]\u@\h\[\e[m\]"            # user@host
     PS1+=":"                                    # :
     PS1+="\[\e[1;34m\]\w\[\e[m\]"               # path
