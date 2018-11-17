@@ -132,5 +132,3 @@ nnoremap t :tabedit<Space>
 
 let g:ctrlp_match_window = 'max:30'
 
-command DeleteFile call delete(@%) | bdelete!
-
