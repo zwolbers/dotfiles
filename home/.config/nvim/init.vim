@@ -42,7 +42,7 @@ set textwidth=72
 " Will make screen redrawing slower.  The screen column can be an absolute
 " number, or a number preceded with '+' or '-', which is added to or
 " subtracted from 'textwidth'.
-set colorcolumn=+0
+set colorcolumn=+0,80
 
 " The minimal number of screen columns to keep to the left and to the right
 " of the cursor if 'nowrap' is set.
@@ -104,7 +104,7 @@ augroup END
 
 augroup filetype_git
     autocmd!
-    autocmd FileType gitcommit set textwidth=72
+    autocmd FileType gitcommit setlocal colorcolumn+=50
 augroup END
 
 augroup filetype_text
