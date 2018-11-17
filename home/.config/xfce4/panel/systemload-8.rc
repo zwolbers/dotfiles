@@ -20,7 +20,7 @@ Text=mem
 [SL_Swap]
 Enabled=true
 Use_Label=false
-Color=rgb(240,240,0)
+Color=rgb(173,127,168)
 Text=swap
 
 [SL_Uptime]
