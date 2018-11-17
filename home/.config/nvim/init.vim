@@ -22,6 +22,7 @@ Plug 'tpope/vim-repeat'                 " Repeat plugin actions (if supported)
 
 " Misc
 Plug 'tpope/vim-obsession'              " Update session files automatically
+Plug 'cespare/vim-toml'
 
 call plug#end()
 
