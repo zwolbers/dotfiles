@@ -35,7 +35,7 @@ set scrolloff=5
 
 " Maximum width of text that is being inserted.  A longer line will be
 " broken after white space to get this width.
-set textwidth=75
+set textwidth=72
 
 " 'colorcolumn' is a comma separated list of screen columns that are
 " highlighted with ColorColumn |hl-ColorColumn|.  Useful to align text.
