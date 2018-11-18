@@ -132,6 +132,7 @@ nnoremap <Return> o<Esc>
 nnoremap t :tabedit<Space>
 
 let g:ctrlp_match_window = 'max:30'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " Update airline symbols/delimiters
 if !exists('g:airline_symbols')
