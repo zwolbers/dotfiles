@@ -39,12 +39,11 @@ xterm*|rxvt*)
     ;;
 esac
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
+# Enable fzf magic.  Note that even though 'vi' mode was already enabled
+# in ~/.inputrc, it must be set again for fzf to properly detect it.
+set -o vi
+[ -f /usr/share/fzf/key-bindings.bash ] && . /usr/share/fzf/key-bindings.bash
+[ -f /usr/share/fzf/completion.bash ] && . /usr/share/fzf/completion.bash
 
 # Enable tmuxinator bash completion, if installed
 tmuxinator_bash_path=$(find ~/.gem -name tmuxinator.bash 2>/dev/null)
@@ -64,4 +63,5 @@ alias sudo='sudo '
 alias nless='/usr/share/nvim/runtime/macros/less.sh'
 alias mux='tmuxinator'
 alias hist='history | sort -uk 2 | sort -n | grep'
+alias preview="fzf --preview 'bat --color \"always\" {}'"
 
