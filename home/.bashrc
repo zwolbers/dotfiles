@@ -5,7 +5,7 @@ shopt -s histappend
 
 HISTSIZE=-1
 HISTFILESIZE=-1
-HISTCONTROL=ignoredups:ignorespace
+HISTCONTROL=ignorespace:ignoredups:erasedups
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -21,14 +21,22 @@ function prompt_command() {
     # show exit code on failure
     [[ ${exit} -ne 0 ]] && PS1+="\[\e[1;31m\]${exit}\[\e[m\]\n"
 
-    PS1+="\[\e[1;35m\]\!\[\e[m\] "              # history numbers
     [[ -n ${SSH_CLIENT} ]] && PS1+="\[\e[2m\]"  # 'dim' if ssh'd
     PS1+="\[\e[1;32m\]\u@\h\[\e[m\]"            # user@host
     PS1+=":"                                    # :
     PS1+="\[\e[1;34m\]\w\[\e[m\]"               # path
     PS1+="\\$ "                                 # $ for user, # for root
 }
-PROMPT_COMMAND=prompt_command
+PROMPT_COMMAND="prompt_command"
+
+function cleanup() {
+    # Figet with the history so that duplicates are properly removed
+    history -n  # Read lines not already read from ~/.bash_history
+    history -w  # Overwrite ~/.bash_history with current history list
+    history -c  # Clear history list
+    history -r  # Append contents of ~/.bash_history to history list
+}
+trap cleanup exit
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
