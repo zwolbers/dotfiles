@@ -61,7 +61,6 @@ alias egrep='egrep --color=auto --exclude-dir=.svn'
 
 alias sudo='sudo '
 alias nless='/usr/share/nvim/runtime/macros/less.sh'
-alias mux='tmuxinator'
 alias hist='history | sort -uk 2 | sort -n | grep'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 
