@@ -1,0 +1,15 @@
+name: dotfiles
+root: ~/Projects/dotfiles/
+
+windows:
+    - edit:
+        layout: main-vertical
+        panes:
+            - files:
+                - " sleep .5"   # Delay so that tmux properly resizes the pane before nvim starts
+                - "nvim"
+            - status:
+                - "tree -aCI .git"
+                - "git lg"
+                - "git status"
+
