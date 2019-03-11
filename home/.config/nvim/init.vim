@@ -117,6 +117,21 @@ augroup filetype_text
     autocmd FileType svn setlocal spell
 augroup END
 
+augroup vim_enter
+    autocmd!
+    autocmd VimEnter * nested call OpenSession()
+augroup END
+
+function! OpenSession()
+    if argc() == 0
+        if filereadable("Layout.vim")
+            source Layout.vim
+        elseif filereadable("Session.vim")
+            source Session.vim
+        endif
+    endif
+endfunction
+
 " Virtual editing means that the cursor can be positioned where there is
 " no actual character.  This can be halfway into a tab or beyond the end
 " of the line.
