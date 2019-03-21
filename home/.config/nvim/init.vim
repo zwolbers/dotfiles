@@ -61,6 +61,8 @@ set shiftround                          " Round to next indentation level
 " Display
 set number                              " Show line numbers
 set colorcolumn=+0,80                   " Show print margins $(textwidth)
+set list                                " Show whitespace
+set listchars=tab:>-,nbsp:~             " Replacement strings for whitespace
 silent! colorscheme jellybeans          " Ignore color scheme if not installed
 
 
