@@ -23,6 +23,7 @@ Plug 'tpope/vim-commentary'             " Toggle comments
 Plug 'tpope/vim-repeat'                 " Repeat plugin actions
 
 " Misc
+Plug 'dhruvasagar/vim-table-mode'       " Auto-format tables
 Plug 'tpope/vim-eunuch'                 " Vim sugar for UNIX commands
 Plug 'tpope/vim-obsession'              " Auto update session files
 Plug 'cespare/vim-toml'
@@ -47,6 +48,8 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 let g:ctrlp_match_window = 'max:30'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+let g:table_mode_corner="|"
 
 
 " Automatic Formatting
