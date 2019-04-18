@@ -7,6 +7,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'bronson/vim-trailing-whitespace'
 
 " Navigation
+Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'bronson/vim-visual-star-search'
 Plug 'easymotion/vim-easymotion'
@@ -77,6 +78,7 @@ noremap <Space> i <Esc>                 " Space bar inserts a space
 noremap <Return> o<Esc>                 " Enter inserts a new line below
 noremap t :tabedit<Space>               " Open a file in a new tab
 noremap <F5> <Esc>:setlocal spell!<CR>  " Toggle spell checking
+map <C-o> :NERDTreeToggle<CR>           " Open NERDTree
 
 
 " File Specific
