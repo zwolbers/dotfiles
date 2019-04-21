@@ -1,4 +1,4 @@
-Session.vim
+Session*.vim
 .vimrc
 .nvimrc
 __pycache__

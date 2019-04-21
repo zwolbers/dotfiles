@@ -122,10 +122,12 @@ augroup END
 
 function! OpenSession()
     if argc() == 0
-        if filereadable("Layout.vim")
-            source Layout.vim
-        elseif filereadable("Session.vim")
-            source Session.vim
+        let l = "Layout" . $MONITOR . ".vim"
+        let s = "Session" . $MONITOR . ".vim"
+        if filereadable(l)
+            execute "source " . l
+        elseif filereadable(s)
+            execute "source " . s
         endif
     endif
 endfunction
