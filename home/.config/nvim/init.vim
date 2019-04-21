@@ -5,6 +5,7 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'nathanaelkane/vim-indent-guides'
 
 " Navigation
 Plug 'scrooloose/nerdtree'
@@ -39,6 +40,10 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = 'ro'
+
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_enable_on_vim_startup = 1
 
 let g:ctrlp_match_window = 'max:30'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
