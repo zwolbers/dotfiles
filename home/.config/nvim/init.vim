@@ -22,6 +22,7 @@ Plug 'tpope/vim-commentary'             " Toggle comments
 Plug 'tpope/vim-repeat'                 " Repeat plugin actions
 
 " Misc
+Plug 'tpope/vim-eunuch'                 " Vim sugar for UNIX commands
 Plug 'tpope/vim-obsession'              " Auto update session files
 Plug 'cespare/vim-toml'
 
