@@ -99,6 +99,9 @@ augroup END
 
 
 " Final
+set exrc                                " Load per-project configs
+set secure                              " Disable shell and write commands
+
 augroup vim_enter                       " Auto load session files
     autocmd!
     autocmd VimEnter * nested call OpenSession()
