@@ -21,6 +21,7 @@ Plug 'tpope/vim-fugitive'               " Git magic
 Plug 'tpope/vim-endwise'                " Match open/close structures
 Plug 'tpope/vim-commentary'             " Toggle comments
 Plug 'tpope/vim-repeat'                 " Repeat plugin actions
+Plug 'rhysd/vim-clang-format'           " clang-format integration
 
 " Misc
 Plug 'dhruvasagar/vim-table-mode'       " Auto-format tables
