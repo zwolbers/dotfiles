@@ -12,6 +12,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'bronson/vim-visual-star-search'
 Plug 'easymotion/vim-easymotion'
+Plug 'rhysd/clever-f.vim'
 
 " VCS
 Plug 'airblade/vim-gitgutter'
@@ -49,6 +50,8 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 let g:ctrlp_match_window = 'max:30'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+let g:clever_f_fix_key_direction = 1
 
 let g:table_mode_corner="|"
 
