@@ -1,0 +1,26 @@
+name: wob-uwqhd
+root: ~/Projects/wob/
+
+pre_window: " export MONITOR=\"UWQHD\""
+
+windows:
+    - make:
+        layout: main-vertical
+        panes:
+            - ""
+            - status:
+                - "tree -aCI .git"
+                - "git lg"
+                - "git status"
+    - edit: ""
+    - grep: ""
+    - wayland:
+        root: ~/Projects/wayland
+        panes: ""
+    - wlroots:
+        root: ~/Projects/wlroots
+        panes: ""
+    - mcwayface:
+        root: ~/Projects/mcwayface
+        panes: ""
+
