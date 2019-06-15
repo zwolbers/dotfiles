@@ -89,7 +89,6 @@ set clipboard=unnamedplus               " Use traditional clipboard
 
 noremap <Space> i <Esc>                 " Space bar inserts a space
 noremap <Return> o<Esc>                 " Enter inserts a new line below
-noremap t :tabedit<Space>               " Open a file in a new tab
 noremap <F5> <Esc>:setlocal spell!<CR>  " Toggle spell checking
 map <C-o> :NERDTreeToggle<CR>           " Open NERDTree
 
