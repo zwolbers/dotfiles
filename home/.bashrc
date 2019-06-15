@@ -60,6 +60,7 @@ if [[ ! -z $tmuxinator_bash_path ]]; then
 fi
 
 alias cat='bat'
+alias diff='diff --color=auto'
 alias ls='ls --color=auto'
 alias ll='ls -lah'
 
