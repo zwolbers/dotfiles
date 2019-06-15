@@ -114,6 +114,12 @@ augroup filetype_text
     autocmd FileType svn setlocal spell
 augroup END
 
+augroup filetype_clang
+    autocmd!
+    autocmd BufNewFile,BufRead .clang-format set syntax=yaml
+    autocmd BufNewFile,BufRead .clang-tidy set syntax=yaml
+augroup END
+
 
 " Final
 set exrc                                " Load per-project configs
