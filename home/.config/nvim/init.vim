@@ -19,6 +19,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'               " Git magic
 
 " Code
+Plug 'editorconfig/editorconfig-vim'    " Per-project coding styles
 Plug 'tpope/vim-endwise'                " Match open/close structures
 Plug 'tpope/vim-commentary'             " Toggle comments
 Plug 'tpope/vim-repeat'                 " Repeat plugin actions
@@ -32,6 +33,7 @@ Plug 'cespare/vim-toml'
 
 call plug#end()
 
+" Appearance
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
@@ -49,11 +51,16 @@ let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_enable_on_vim_startup = 1
 
+" Navigation
 let g:ctrlp_match_window = 'max:30'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 let g:clever_f_fix_key_direction = 1
 
+" Code
+let g:EditorConfig_exclude_patterns = ['fugitive://.\*']
+
+" Misc
 let g:table_mode_corner="|"
 
 
