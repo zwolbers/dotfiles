@@ -59,6 +59,9 @@ if [[ ! -z $tmuxinator_bash_path ]]; then
     . $tmuxinator_bash_path
 fi
 
+# Enable autojump, if installed
+[[ -f /etc/profile.d/autojump.bash ]] && . /etc/profile.d/autojump.bash
+
 alias cat='bat'
 alias diff='diff --color=auto'
 alias ls='ls --color=auto'
