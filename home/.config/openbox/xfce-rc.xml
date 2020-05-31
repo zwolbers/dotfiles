@@ -384,6 +384,22 @@
         <command>xfce4-terminal --maximize --hide-borders</command>
       </action>
     </keybind>
+    <keybind key="W-m">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+        </startupnotify>
+        <command>xfce4-terminal -e "bash -c \"tmuxinator $(tmuxinator list -n | grep -v \\\"tmuxinator projects\\\" | fzf)\""</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-m">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+        </startupnotify>
+        <command>xfce4-terminal -e "bash -c \"tmuxinator $(tmuxinator list -n | grep -v \\\"tmuxinator projects\\\" | fzf)\"" --maximize --hide-borders</command>
+      </action>
+    </keybind>
     <keybind key="W-l">
       <action name="Execute">
         <command>slock</command>
