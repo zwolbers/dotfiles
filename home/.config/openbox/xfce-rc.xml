@@ -434,22 +434,62 @@
     </keybind>
     <keybind key="A-1">
       <action name="Execute">
-        <command>bash -c "test -d ~/.config/chromium/Default &amp;&amp; chromium --profile-directory=Default --new-window blank.org"</command>
+        <command>firefox -P Default --new-window</command>
       </action>
     </keybind>
     <keybind key="A-2">
       <action name="Execute">
-        <command>bash -c "test -d ~/.config/chromium/Profile\ 1 &amp;&amp; chromium --profile-directory=Profile\ 1 --new-window blank.org"</command>
+        <command>firefox -P Profile\ 1 --new-window</command>
+      </action>
+    </keybind>
+    <keybind key="A-3">
+      <action name="Execute">
+        <command>firefox -P Profile\ 2 --new-window</command>
       </action>
     </keybind>
     <keybind key="A-S-1">
       <action name="Execute">
-        <command>bash -c "test -d ~/.config/chromium/Default &amp;&amp; chromium --profile-directory=Default --incognito --new-window blank.org"</command>
+        <command>firefox -P Default --private-window</command>
       </action>
     </keybind>
     <keybind key="A-S-2">
       <action name="Execute">
-        <command>bash -c "test -d ~/.config/chromium/Profile\ 1 &amp;&amp; chromium --profile-directory=Profile\ 1 --incognito --new-window blank.org"</command>
+        <command>firefox -P Profile\ 1 --private-window</command>
+      </action>
+    </keybind>
+    <keybind key="A-S-3">
+      <action name="Execute">
+        <command>firefox -P Profile\ 2 --private-window</command>
+      </action>
+    </keybind>
+    <keybind key="A-6">
+      <action name="Execute">
+        <command>chromium --profile-directory=Default --new-window</command>
+      </action>
+    </keybind>
+    <keybind key="A-7">
+      <action name="Execute">
+        <command>chromium --profile-directory=Profile\ 1 --new-window</command>
+      </action>
+    </keybind>
+    <keybind key="A-8">
+      <action name="Execute">
+        <command>chromium --profile-directory=Profile\ 2 --new-window</command>
+      </action>
+    </keybind>
+    <keybind key="A-S-6">
+      <action name="Execute">
+        <command>chromium --profile-directory=Default --incognito --new-window</command>
+      </action>
+    </keybind>
+    <keybind key="A-S-7">
+      <action name="Execute">
+        <command>chromium --profile-directory=Profile\ 1 --incognito --new-window</command>
+      </action>
+    </keybind>
+    <keybind key="A-S-8">
+      <action name="Execute">
+        <command>chromium --profile-directory=Profile\ 2 --incognito --new-window</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
