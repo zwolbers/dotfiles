@@ -905,13 +905,6 @@
 
   # end of the example
 -->
-    <application name="xfce4-appfinder">
-      <position>
-        <x>center</x>
-        <y>center</y>
-      </position>
-      <focus>yes</focus>
-    </application>
     <application name="chromium" class="Chromium">
       <maximized>true</maximized>
     </application>
