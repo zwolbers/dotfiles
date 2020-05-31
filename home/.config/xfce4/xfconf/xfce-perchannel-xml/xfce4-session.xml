@@ -34,7 +34,7 @@
       </property>
       <property name="Client4_PerScreen" type="bool" value="false"/>
       <property name="Client5_Command" type="array">
-        <value type="string" value="compton"/>
+        <value type="string" value="picom"/>
       </property>
       <property name="Client5_PerScreen" type="bool" value="false"/>
     </property>
