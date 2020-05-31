@@ -400,6 +400,22 @@
         <command>xfce4-terminal -e "bash -c \"tmuxinator $(tmuxinator list -n | grep -v \\\"tmuxinator projects\\\" | fzf)\"" --maximize --hide-borders</command>
       </action>
     </keybind>
+    <keybind key="S-W-m">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+        </startupnotify>
+        <command>xfce4-terminal -e "bash -c \"tmux attach -t $(tmux ls | fzf | sed s/:.*$//)\""</command>
+      </action>
+    </keybind>
+    <keybind key="S-C-A-m">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+        </startupnotify>
+        <command>xfce4-terminal -e "bash -c \"tmux attach -t $(tmux ls | fzf | sed s/:.*$//)\"" --maximize --hide-borders</command>
+      </action>
+    </keybind>
     <keybind key="W-l">
       <action name="Execute">
         <command>slock</command>
