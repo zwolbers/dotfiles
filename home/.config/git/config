@@ -15,3 +15,5 @@
     insteadOf = "aur:"
 [commit]
     verbose = true
+[pull]
+    ff = only
