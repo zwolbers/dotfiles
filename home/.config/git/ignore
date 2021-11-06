@@ -1,3 +1,4 @@
+.clangd/
 Notes.md
 Session*.vim
 .vimrc
