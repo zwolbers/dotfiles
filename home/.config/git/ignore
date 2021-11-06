@@ -1,4 +1,5 @@
 .clangd/
+.vsnip/
 Notes.md
 Session*.vim
 .vimrc
