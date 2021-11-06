@@ -1,5 +1,5 @@
 [user]
-    email = zach.wolbers@gmail.com
+    # email purposely unset.  Add to project .git/config for each repo.
     name = Zach Wolbers
 [color "grep"]
     filename = magenta
