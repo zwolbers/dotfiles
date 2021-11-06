@@ -2,6 +2,7 @@
 .vsnip/
 Notes.md
 Session*.vim
+tags
 .vimrc
 .nvimrc
 __pycache__
