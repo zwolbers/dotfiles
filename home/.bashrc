@@ -111,7 +111,7 @@ function pre_command() {
 trap pre_command debug
 
 function cleanup() {
-    # Figet with the history so that duplicates are properly removed
+    # Fidget with the history so that duplicates are properly removed
     history -n  # Read lines not already read from ~/.bash_history
     history -w  # Overwrite ~/.bash_history with current history list
     history -c  # Clear history list
