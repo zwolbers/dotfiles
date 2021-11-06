@@ -7,7 +7,7 @@ export BAT_PAGER=""
 export PATH="$HOME/bin:$PATH:$HOME/.cabal/bin:$HOME/.local/bin"
 
 # Add RubyGems to PATH, if installed
-ruby_path=$(find $HOME/.gem -name bin -not -path '*gems*' -type d | sort | tail -n 1 2>/dev/null)
+ruby_path=$([ -d ~/.gem ] && find $HOME/.gem -name bin -not -path '*gems*' -type d | sort | tail -n 1 2>/dev/null)
 if [[ ! -z $ruby_path ]]; then
     export PATH="$PATH:$ruby_path"
 fi
