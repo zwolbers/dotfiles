@@ -157,17 +157,42 @@ function dotfile_import() { (
 )
 }
 
-alias cat='bat'
+# Colorize popular commands
+GRC_ALIASES=true
+[[ -s "/etc/profile.d/grc.sh" ]] &&
+    source /etc/profile.d/grc.sh &&
+    unalias diff &&
+    unalias gcc &&
+    unalias g++ &&
+    unalias make
+
 alias diff='diff --color=auto'
-alias ls='ls --color=auto'
-alias ll='ls -lah'
-
 alias grep='grep --color=auto --exclude-dir=.svn'
-alias fgrep='fgrep --color=auto --exclude-dir=.svn'
-alias egrep='egrep --color=auto --exclude-dir=.svn'
 
+[[ $(type -P bat) ]] && bat=bat
+[[ $(type -P batcat) ]] && bat=batcat
+[[ -n $bat ]] && alias cat='$bat'
+
+[[ -f /usr/share/nvim/runtime/macros/less.sh ]] &&
+    alias less='/usr/share/nvim/runtime/macros/less.sh'
+
+if [[ $(type -P exa) ]]; then
+    # For performance reasons, exa doesn't list a file's git status by
+    # default.  Enable it anyway.  This is only a issue with large
+    # repos/directories; we can fall back to ls if needed.
+    alias ls='exa'
+    alias ll='exa -la --git'
+    alias lt='exa --git --tree'
+    alias llt='exa -laI ".git|.hg|.svn|.clangd" --git --tree'
+else
+    alias ls='ls --color=auto'
+    alias ll='ls -lah'
+    alias lt='tree -C'
+    alias llt='tree -CaI ".git|.hg|.svn|.clangd"'
+fi
+
+# Misc aliases
 alias sudo='sudo '
-alias nless='/usr/share/nvim/runtime/macros/less.sh'
 alias hist='history | sort -uk 2 | sort -n | grep'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 
