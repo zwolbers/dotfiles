@@ -122,14 +122,12 @@ trap cleanup exit
 # Enable fzf magic.  Note that even though 'vi' mode was already enabled
 # in ~/.inputrc, it must be set again for fzf to properly detect it.
 set -o vi
-[ -f /usr/share/fzf/key-bindings.bash ] && . /usr/share/fzf/key-bindings.bash
-[ -f /usr/share/fzf/completion.bash ] && . /usr/share/fzf/completion.bash
+[[ -f /usr/share/fzf/key-bindings.bash ]] && . /usr/share/fzf/key-bindings.bash
+[[ -f /usr/share/fzf/completion.bash ]] && . /usr/share/fzf/completion.bash
 
 # Enable tmuxinator bash completion, if installed
 tmuxinator_bash_path=$([[ -d ~/.gem ]] && find ~/.gem -name tmuxinator.bash | sort | tail -n 1 2>/dev/null)
-if [[ ! -z $tmuxinator_bash_path ]]; then
-    . $tmuxinator_bash_path
-fi
+[[ -n $tmuxinator_bash_path ]] && . $tmuxinator_bash_path
 
 # Enable autojump, if installed
 [[ -f /etc/profile.d/autojump.bash ]] && . /etc/profile.d/autojump.bash
