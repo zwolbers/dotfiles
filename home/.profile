@@ -1,4 +1,4 @@
-export EDITOR="nvim"
+[[ $(type -P nvim) ]] && export EDITOR="nvim" || export EDITOR="vim"
 export DIFFPROG="nvim -d"
 export BAT_THEME="TwoDark"
 export BAT_STYLE="changes,header,numbers"
