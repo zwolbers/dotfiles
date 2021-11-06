@@ -134,6 +134,31 @@ fi
 # Enable autojump, if installed
 [[ -f /etc/profile.d/autojump.bash ]] && . /etc/profile.d/autojump.bash
 
+function dotfile_import() { (
+    set -e
+    local -r dot_dir="${HOME}/Projects/dotfiles/home"   # Assume installation path
+
+    local -r src_file="$(readlink -f $1)"
+    local -r src_dir="$(dirname "$src_file")/"
+
+    [[ $src_dir == $HOME* ]]    || { echo "Error: The file isn't in '$HOME'"; exit 1; }
+    [[ -d $dot_dir ]]           || { echo "Error: The directory '$dot_dir' does not exist"; exit 1; }
+
+    local -r root_file="${src_file#$HOME}"
+
+    local -r dst_file="${dot_dir}${root_file}"
+    local -r dst_dir="$(dirname "$dst_file")/"
+
+    echo "Moving ~$root_file"
+    echo
+
+    set -x
+    mkdir -p "$dst_dir"
+    mv "$src_file" "$dst_dir"
+    ln -rs "$dst_file" "$src_dir"
+)
+}
+
 alias cat='bat'
 alias diff='diff --color=auto'
 alias ls='ls --color=auto'
