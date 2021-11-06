@@ -17,3 +17,5 @@
     verbose = true
 [pull]
     ff = only
+[push]
+    followTags = true
