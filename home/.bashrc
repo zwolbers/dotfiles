@@ -126,7 +126,7 @@ set -o vi
 [ -f /usr/share/fzf/completion.bash ] && . /usr/share/fzf/completion.bash
 
 # Enable tmuxinator bash completion, if installed
-tmuxinator_bash_path=$(find ~/.gem -name tmuxinator.bash | sort | tail -n 1 2>/dev/null)
+tmuxinator_bash_path=$([[ -d ~/.gem ]] && find ~/.gem -name tmuxinator.bash | sort | tail -n 1 2>/dev/null)
 if [[ ! -z $tmuxinator_bash_path ]]; then
     . $tmuxinator_bash_path
 fi
