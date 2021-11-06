@@ -131,6 +131,7 @@ tmuxinator_bash_path=$([[ -d ~/.gem ]] && find ~/.gem -name tmuxinator.bash | so
 
 # Enable autojump, if installed
 [[ -f /etc/profile.d/autojump.bash ]] && . /etc/profile.d/autojump.bash
+[[ -f /usr/share/autojump/autojump.sh ]] && . /usr/share/autojump/autojump.sh
 
 function dotfile_import() { (
     set -e
