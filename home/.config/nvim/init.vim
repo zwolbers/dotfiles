@@ -74,13 +74,15 @@ let g:table_mode_corner="|"
 
 
 " Automatic Formatting
-"
-" c Auto-wrap comments using textwidth, inserting the current comment
+" - c Auto-wrap comments using textwidth, inserting the current comment
 "   leader automatically.
-" q Allow formatting of comments with "gq"
-" n When formatting text, recognize numbered lists
-" j Where it makes sense, remove a comment leader when joining lines
-set formatoptions=cqnj
+" - q Allow formatting of comments with "gq"
+" - n When formatting text, recognize numbered lists
+" - 1 Don't break a line after a one-letter word
+" - j Where it makes sense, remove a comment leader when joining lines
+" - p Don't break lines at single spaces that follow periods (ex:
+"   "Mr. Freeman")
+set formatoptions=cqn1jp
 set textwidth=72                        " Auto wrap width
 set expandtab                           " Insert spaces instead of tabs
 set tabstop=4                           " Width of a tab character
