@@ -11,7 +11,6 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'nathanaelkane/vim-indent-guides'
 
 " Navigation
-Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'bronson/vim-visual-star-search'
 Plug 'easymotion/vim-easymotion'
