@@ -34,6 +34,10 @@ Plug 'tpope/vim-eunuch'                 " Vim sugar for UNIX commands
 Plug 'tpope/vim-obsession'              " Auto update session files
 Plug 'cespare/vim-toml'
 
+if !has('nvim')
+    Plug 'tpope/vim-sensible'           " Use modern settings
+endif
+
 call plug#end()
 
 " Appearance
