@@ -106,6 +106,7 @@ set scrolloff=5                         " Keep lines above/below cursor
 set sidescrolloff=5                     " Keep columns left/right of cursor
 set virtualedit=all                     " Allow cursor to be placed anywhere
 set clipboard=unnamedplus               " Use traditional clipboard
+set spell                               " Enable spell checking by default
 
 noremap <Space> i <Esc>                 " Space bar inserts a space
 noremap <Return> o<Esc>                 " Enter inserts a new line below
