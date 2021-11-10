@@ -149,6 +149,8 @@ augroup filetype_clang
     autocmd BufNewFile,BufRead .clang-tidy set syntax=yaml
 augroup END
 
+autocmd FileType c,cpp,java set commentstring=//\ %s
+
 
 " Final
 set exrc                                " Load per-project configs
