@@ -101,6 +101,7 @@ silent! colorscheme jellybeans          " Ignore color scheme if not installed
 
 " User Interface
 set mouse=a                             " Enable the mouse
+set cursorline                          " Highlight the current location of the cursor
 set scrolloff=5                         " Keep lines above/below cursor
 set sidescrolloff=5                     " Keep columns left/right of cursor
 set virtualedit=all                     " Allow cursor to be placed anywhere
