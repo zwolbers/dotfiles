@@ -109,10 +109,8 @@ set clipboard=unnamedplus               " Use traditional clipboard
 set spell                               " Enable spell checking by default
 set wildignore+=*.o,*.d                 " Files to ignore with wildcards
 
-noremap <Space> i <Esc>                 " Space bar inserts a space
-noremap <Return> o<Esc>                 " Enter inserts a new line below
-noremap <F5> <Esc>:setlocal spell!<CR>  " Toggle spell checking
-map <C-o> :NERDTreeToggle<CR>           " Open NERDTree
+nnoremap <Space> i <Esc>
+noremap <F5> <Esc>:setlocal spell!<CR>
 
 
 " File Specific
