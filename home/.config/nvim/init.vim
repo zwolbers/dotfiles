@@ -67,6 +67,8 @@ let g:clever_f_fix_key_direction = 1
 " Code
 let g:EditorConfig_exclude_patterns = ['fugitive://.\*']
 
+let mapleader = ";"                     " Set early on; some plugins use <leader>
+
 " Misc
 let g:table_mode_corner="|"
 
