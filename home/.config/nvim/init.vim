@@ -107,6 +107,7 @@ set sidescrolloff=5                     " Keep columns left/right of cursor
 set virtualedit=all                     " Allow cursor to be placed anywhere
 set clipboard=unnamedplus               " Use traditional clipboard
 set spell                               " Enable spell checking by default
+set wildignore+=*.o,*.d                 " Files to ignore with wildcards
 
 noremap <Space> i <Esc>                 " Space bar inserts a space
 noremap <Return> o<Esc>                 " Enter inserts a new line below
