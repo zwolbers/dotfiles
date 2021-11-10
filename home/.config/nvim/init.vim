@@ -9,6 +9,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'mkitt/tabline.vim'
 
 " Navigation
 Plug 'kien/ctrlp.vim'
