@@ -110,7 +110,17 @@ set spell                               " Enable spell checking by default
 set wildignore+=*.o,*.d                 " Files to ignore with wildcards
 
 nnoremap <Space> i <Esc>
+nnoremap <leader>h :noh<CR>
 noremap <F5> <Esc>:setlocal spell!<CR>
+noremap <F6> <Esc>:checktime<CR>
+nnoremap <leader>s a<C-X><C-S>
+nnoremap <leader>tc :tabclose<CR>
+nnoremap <leader>te :tabedit<Space>
+nnoremap <leader>tn :tabnew<CR>
+nnoremap <leader>tf :tabfirst<CR>
+nnoremap <leader>tl :tablast<CR>
+nnoremap <leader>to :tabonly<CR>
+nnoremap <leader>tg :tabmove<Space>
 
 
 " File Specific
