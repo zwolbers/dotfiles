@@ -127,7 +127,9 @@ function source_var { [[ -n $1 ]] && source $1; }   # Source var if set
 # in ~/.inputrc, it must be set again for fzf to properly detect it.
 set -o vi
 source_file "/usr/share/fzf/key-bindings.bash"
+source_file "/usr/share/doc/fzf/examples/key-bindings.bash"
 source_file "/usr/share/fzf/completion.bash"
+source_file "/usr/share/doc/fzf/examples/completion.bash"
 
 # Enable tmuxinator bash completion, if installed
 tmuxinator_bash_path=$([[ -d ~/.gem ]] && find ~/.gem -name tmuxinator.bash | sort | tail -n 1 2>/dev/null)
