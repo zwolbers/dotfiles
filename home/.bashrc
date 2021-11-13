@@ -119,19 +119,23 @@ function cleanup() {
 }
 trap cleanup exit
 
+# Helper functions
+function source_file { [[ -f $1 ]] && source $1; }  # Source file if present
+function source_var { [[ -n $1 ]] && source $1; }   # Source var if set
+
 # Enable fzf magic.  Note that even though 'vi' mode was already enabled
 # in ~/.inputrc, it must be set again for fzf to properly detect it.
 set -o vi
-[[ -f /usr/share/fzf/key-bindings.bash ]] && . /usr/share/fzf/key-bindings.bash
-[[ -f /usr/share/fzf/completion.bash ]] && . /usr/share/fzf/completion.bash
+source_file "/usr/share/fzf/key-bindings.bash"
+source_file "/usr/share/fzf/completion.bash"
 
 # Enable tmuxinator bash completion, if installed
 tmuxinator_bash_path=$([[ -d ~/.gem ]] && find ~/.gem -name tmuxinator.bash | sort | tail -n 1 2>/dev/null)
-[[ -n $tmuxinator_bash_path ]] && . $tmuxinator_bash_path
+source_var $tmuxinator_bash_path
 
 # Enable autojump, if installed
-[[ -f /etc/profile.d/autojump.bash ]] && . /etc/profile.d/autojump.bash
-[[ -f /usr/share/autojump/autojump.sh ]] && . /usr/share/autojump/autojump.sh
+source_file "/etc/profile.d/autojump.bash"
+source_file "/usr/share/autojump/autojump.sh"
 
 function dotfile_import() { (
     set -e
@@ -160,8 +164,7 @@ function dotfile_import() { (
 
 # Colorize popular commands
 GRC_ALIASES=true
-[[ -s "/etc/profile.d/grc.sh" ]] &&
-    source /etc/profile.d/grc.sh &&
+source_file "/etc/profile.d/grc.sh" &&
     unalias diff &&
     unalias gcc &&
     unalias g++ &&
