@@ -173,7 +173,7 @@ source_file "/etc/profile.d/grc.sh" &&
     unalias make
 
 alias diff='diff --color=auto'
-alias grep='grep --color=auto --exclude-dir=.svn'
+alias grep='grep --color=auto --exclude-dir={.svn,__pycache__}'
 
 [[ $(type -P bat) ]] && bat=bat
 [[ $(type -P batcat) ]] && bat=batcat
@@ -188,13 +188,13 @@ if [[ $(type -P exa) ]]; then
     # repos/directories; we can fall back to ls if needed.
     alias ls='exa'
     alias ll='exa -la --git'
-    alias lt='exa --git --tree'
-    alias llt='exa -laI ".git|.hg|.svn|.clangd" --git --tree'
+    alias lt='exa -I "__pycache__" --git --tree'
+    alias llt='exa -laI ".git|.hg|.svn|.clangd|__pycache__" --git --tree'
 else
     alias ls='ls --color=auto'
     alias ll='ls -lah'
-    alias lt='tree -C'
-    alias llt='tree -CaI ".git|.hg|.svn|.clangd"'
+    alias lt='tree -CI "__pycache__"'
+    alias llt='tree -CaI ".git|.hg|.svn|.clangd|__pycache__"'
 fi
 
 # Misc aliases
